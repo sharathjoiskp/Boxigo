@@ -9,7 +9,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
 import '../Model/box_model.dart';
-import '../Model/model.dart';
 
 class NewItemPage extends StatefulWidget {
   const NewItemPage({super.key});
@@ -41,7 +40,7 @@ class _NewItemPageState extends State<NewItemPage> {
             itemCount: dataList.length,
             itemBuilder: (context, index) {
               var date = dataList[index].movingOn;
-        
+
               return Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Container(
@@ -61,14 +60,14 @@ class _NewItemPageState extends State<NewItemPage> {
                                   ),
                                 ),
                                 Text(
-                             DateFormat.d().format(date),
+                                  DateFormat.d().format(date),
                                   style: TextStyle(
                                       fontSize: 40,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.orange),
                                 ),
                                 Text(
-                                 DateFormat.Hm().format(date),
+                                  DateFormat.Hm().format(date),
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w600,
